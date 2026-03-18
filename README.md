@@ -1,4 +1,4 @@
-8# Projeto-linux
+ Projeto-linux
 Projeto de bruta força no linux
 
 Wordlist
@@ -13,8 +13,22 @@ admin123
 root
 toor
 
-Scripts
+Scripts:
 
+import json
+from utils import carregar_wordlist
+
+
+with open('../config/config.json') as f:
+    config = json.load(f)
+
+wordlist = carregar_wordlist(config["wordlist"])
+
+print("Wordlist carregada:", len(wordlist), "palavras")
+
+
+for senha in wordlist[:10]:
+    print("Testando:", senha)
 
 
 
