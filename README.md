@@ -1,7 +1,7 @@
  Projeto-linux
 Projeto de bruta força no linux
 
-Wordlist
+Wordlist:
 123456
 senha123
 admin
@@ -30,6 +30,13 @@ print("Wordlist carregada:", len(wordlist), "palavras")
 for senha in wordlist[:10]:
     print("Testando:", senha)
 
+
+configuracoes:
+{
+  "wordlist": "../wordlists/senhas.txt",
+  "modo": "teste",
+  "threads": 5
+}
 
 
 
